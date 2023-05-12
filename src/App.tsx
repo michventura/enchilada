@@ -1,20 +1,11 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { Workspace} from './components/workspace';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-    <p>hola Jona!!</p>
-    <button 
-      classname="button blue"
-      href="#"
-    >Click</button>
-   </> 
-  )
+      <Workspace />
+    </>
+  );
 }
 
 export default App

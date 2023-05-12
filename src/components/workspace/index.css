@@ -1,0 +1,58 @@
+.workspace {
+  display: grid;
+  gap: 1ch;
+  margin: auto;
+  padding-block-start: 4vh;
+  width: 90vw;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4ch;
+  height: 40px;
+  padding-inline: 20px;
+  background-color: #292929;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.3);
+}
+
+.toolbar > * {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  width: fit-content;
+}
+
+.toolbar > *:last-child {
+  gap: 3ch;
+}
+
+.settings {
+  display: flex;
+  gap: 3ch;
+}
+
+.settings-sheet {
+  background-color: #292929;
+  width: 256px;
+  height: min(60vh, 800px);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.3);
+}
+
+.settings-sheet h2 {
+  text-transform: uppercase;
+}
+
+.settings-display {
+  display: grid;
+  place-items: center;
+}
+
+.settings-display img {
+  max-width: fit-content;
+  height: auto;
+  object-fit: contain;
+}
