@@ -2,12 +2,26 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface ImageState {
   src: string;
-  filter: 'none' | 'grayscale' | 'contrast' | 'brightness' | 'sepia' | 'saturate';
+  filters: IFilter,
+}
+
+interface IFilter {
+  grayscale: number;
+  contrast: number;
+  brightness:number;
+  sepia:number;
+  saturate: number;
 }
 
 const initialState: ImageState = {
   src: '',
-  filter: 'none',
+  filters: {
+    grayscale: 0,
+    contrast: 100,
+    brightness: 100,
+    sepia: 0,
+    saturate: 100,
+  },
 };
 
 export const imageSlice = createSlice({
@@ -17,8 +31,8 @@ export const imageSlice = createSlice({
     setImageSrc: (state, action: PayloadAction<string>) => {
       state.src = action.payload;
     },
-    setFilter: (state, action: PayloadAction<'none' | 'grayscale' | 'contrast' | 'brightness' | 'sepia' | 'saturate'>) => {
-      state.filter = action.payload;
+    setFilter: (state, action: PayloadAction<IFilter>) => {
+      state.filters = action.payload;
     },
   },
 });
